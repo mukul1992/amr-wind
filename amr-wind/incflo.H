@@ -12,6 +12,9 @@
 #include "amr-wind/core/SimTime.H"
 #include "amr-wind/core/FieldRepo.H"
 
+#ifdef ERF_USE_MULTIBLOCK
+  class MultiBlockContainer;
+#endif
 namespace amr_wind {
 namespace pde {
 class PDEBase;
