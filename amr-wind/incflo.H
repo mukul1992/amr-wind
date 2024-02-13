@@ -13,7 +13,7 @@
 #include "amr-wind/core/FieldRepo.H"
 
 #ifdef ERF_USE_MULTIBLOCK
-  class MultiBlockContainer;
+class MultiBlockContainer;
 #endif
 namespace amr_wind {
 namespace pde {
