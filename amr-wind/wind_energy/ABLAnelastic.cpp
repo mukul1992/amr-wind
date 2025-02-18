@@ -77,6 +77,8 @@ void ABLAnelastic::initialize_data()
     m_pressure.copy_to_field(p0);
     m_theta.copy_to_field(temp0);
     density0_field.fillpatch(m_sim.time().current_time());
+    auto& density_field = m_sim.repo().get_field("density");
+    amr_wind::field_ops::copy(density_field, density0_field, 0, 0, density_field.num_comp(), density_field.num_grow());
     temp0.fillpatch(m_sim.time().current_time());
 }
 
